@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Great Cleaner Calgary | Premium Home &amp; Commercial Cleaning in Calgary</title>
+<meta name="description" content="Premium home cleaning in Calgary, tailored to your priorities. Time-based pricing, flexible scope and a satisfaction walk-through before we leave. Residential, carpet and commercial cleaning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#29599F;
+  --navy:#132B52;
+  --ink:#0E1B30;
+  --lime:#B0CB1F;
+  --lime-soft:#EEF4CC;
+  --paper:#F7F8F3;
+  --line:#DDE2D3;
+  --muted:#5B677A;
+  --white:#fff;
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{overflow-x:clip;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin:0 auto}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--lime);border-radius:3px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:.98rem;transition:.25s;border:2px solid transparent;cursor:pointer;font-family:var(--body)}
+.btn-lime{background:var(--lime);color:var(--navy)}
+.btn-lime:hover{background:var(--navy);color:var(--lime)}
+.btn-line{border-color:var(--navy);color:var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* top bar */
+.topbar{background:var(--navy);color:#C9D4E6;font-size:.84rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 0;gap:20px;flex-wrap:wrap}
+.topbar .l{display:flex;gap:26px;flex-wrap:wrap}
+.topbar a:hover{color:var(--lime)}
+.topbar .stars{color:var(--lime);letter-spacing:2px}
+.topbar b{color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo img{height:58px;width:auto}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{font-weight:600;font-size:.95rem;position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--lime);transition:.25s}
+nav a:hover::after,nav a.on::after{width:100%}
+.menu-btn{display:none;background:none;border:0;cursor:pointer}
+.menu-btn span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0;border-radius:3px}
+
+/* hero */
+.hero{padding:70px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.7rem);font-weight:800;color:var(--navy)}
+.hero h1 .hl{position:relative;white-space:nowrap;color:var(--blue)}
+.hero h1 .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.28em;background:var(--lime);z-index:-1;border-radius:4px;transform:skew(-8deg)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px;margin:24px 0 34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;margin-top:48px;border-top:1px solid var(--line);padding-top:26px}
+.facts div{flex:1;padding-right:18px}
+.facts div+div{padding-left:22px;border-left:1px solid var(--line)}
+.facts strong{display:block;font-family:var(--head);font-size:1.65rem;color:var(--navy);line-height:1.1}
+.facts span{font-size:.86rem;color:var(--muted)}
+.hero-visual{position:relative;height:580px}
+.hv-main{position:absolute;right:0;top:0;width:86%;height:470px;clip-path:polygon(0 0,86% 0,100% 14%,100% 100%,0 100%);overflow:hidden}
+.hv-main img{width:100%;height:100%;object-fit:cover;object-position:40% center}
+.hv-small{position:absolute;left:0;bottom:0;width:46%;height:230px;border:8px solid var(--paper);overflow:hidden;border-radius:4px}
+.hv-small img{width:100%;height:100%;object-fit:cover}
+.sticker{position:absolute;right:6%;bottom:40px;background:var(--navy);color:#fff;padding:20px 22px;max-width:250px;border-radius:4px;box-shadow:0 20px 40px -18px rgba(14,27,48,.5)}
+.sticker .tick{width:34px;height:34px;border-radius:50%;background:var(--lime);display:grid;place-items:center;margin-bottom:10px}
+.sticker .tick svg{width:18px;height:18px;color:var(--navy)}
+.sticker strong{font-family:var(--head);font-size:1.1rem;display:block;line-height:1.2}
+.sticker small{color:#AFC0DA;font-size:.82rem}
+.hero-dots{position:absolute;left:-40px;top:60px;width:160px;height:160px;background-image:radial-gradient(var(--lime) 2px,transparent 2px);background-size:16px 16px;opacity:.55;z-index:-1}
+
+/* ticker */
+.ticker-wrap{overflow:hidden;padding:24px 0}
+.ticker{background:var(--blue);color:#fff;overflow:hidden;padding:20px 0;transform:rotate(-1.2deg);margin:0 -10px;position:relative;z-index:2}
+.ticker .track{display:flex;gap:50px;width:max-content;animation:slide 30s linear infinite}
+.ticker span{font-family:var(--head);font-weight:800;font-size:clamp(1.4rem,2.6vw,2.2rem);display:flex;align-items:center;gap:50px;white-space:nowrap}
+.ticker span i{color:var(--lime);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* residential index */
+.res{padding:120px 0 110px}
+.res .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.res-head{position:sticky;top:120px}
+.res-head h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--navy);margin:14px 0 18px}
+.res-head p{color:var(--muted);max-width:380px}
+.res-preview{margin-top:30px;height:290px;overflow:hidden;border-radius:4px;position:relative}
+.res-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s,transform .9s;transform:scale(1.06)}
+.res-preview img.show{opacity:1;transform:scale(1)}
+.idx{list-style:none;border-top:2px solid var(--navy)}
+.idx li{border-bottom:1px solid var(--line)}
+.idx button{all:unset;cursor:pointer;display:grid;grid-template-columns:64px 1fr auto;align-items:center;width:100%;padding:26px 0;gap:14px}
+.idx .n{font-family:var(--head);font-weight:700;color:var(--lime);font-size:1.05rem;-webkit-text-stroke:.3px var(--navy)}
+.idx h3{font-size:clamp(1.35rem,2.2vw,1.9rem);color:var(--navy);font-weight:700;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.idx .tag{font-family:var(--body);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--lime);color:var(--navy);padding:4px 10px;border-radius:30px}
+.idx .pm{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--navy);display:grid;place-items:center;transition:.3s}
+.idx .pm svg{width:16px;height:16px;transition:.3s}
+.idx li.open .pm{background:var(--navy);color:var(--lime)}
+.idx li.open .pm svg{transform:rotate(45deg)}
+.idx .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.idx li.open .body{grid-template-rows:1fr}
+.idx .body>div{overflow:hidden}
+.idx .body p{padding:0 0 26px 78px;color:var(--muted);max-width:600px}
+.idx .body ul{display:flex;flex-wrap:wrap;gap:8px;padding:0 0 28px 78px;list-style:none;margin-top:-12px}
+.idx .body ul li{border:0;font-size:.82rem;font-weight:600;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:30px}
+
+/* carpet */
+.carpet{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.carpet .wrap{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.carpet .pic{position:relative;margin-left:calc(-1 * (100vw - min(1240px,92vw))/2)}
+.carpet .pic img{width:100%;height:100%;object-fit:cover}
+.carpet .txt{padding:90px 0 90px 70px}
+.carpet .eyebrow{color:var(--lime)}
+.carpet h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:16px 0 10px}
+.price{display:inline-flex;align-items:baseline;gap:8px;margin:12px 0 24px;font-family:var(--head)}
+.price small{font-size:1rem;color:#AFC0DA;font-family:var(--body)}
+.price b{font-size:3rem;color:var(--lime);line-height:1}
+.carpet p{color:#C9D4E6;max-width:460px}
+.process{list-style:none;margin:36px 0 38px;counter-reset:s;display:grid;gap:0}
+.process li{counter-increment:s;display:flex;align-items:center;gap:18px;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-weight:600;font-size:1.05rem}
+.process li::before{content:"0" counter(s);font-family:var(--head);color:var(--navy);background:var(--lime);width:38px;height:38px;border-radius:8px;display:grid;place-items:center;font-size:.9rem;flex:none}
+.carpet .btn-line{border-color:#fff;color:#fff}
+.carpet .btn-line:hover{background:#fff;color:var(--navy)}
+
+/* newborn */
+.newborn{padding:120px 0 40px}
+.nb{display:grid;grid-template-columns:auto 1fr auto;gap:50px;align-items:center;background:var(--lime-soft);border-radius:28px;padding:44px 54px;position:relative;overflow:hidden}
+.nb::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(176,203,31,.25)}
+.nb .ph{width:220px;height:220px;border-radius:50%;overflow:hidden;border:8px solid #fff;flex:none}
+.nb .ph img{width:100%;height:100%;object-fit:cover}
+.nb .flag{display:inline-block;background:var(--navy);color:var(--lime);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:4px}
+.nb h2{font-size:clamp(2rem,3.4vw,2.9rem);color:var(--navy);margin:14px 0 10px}
+.nb p{color:#43506A;max-width:480px}
+.nb .btn{position:relative;z-index:2}
+
+/* scope + estimate */
+.scope{padding:110px 0}
+.scope-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.scope-top h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--navy);margin-top:14px;max-width:640px}
+.scope-top p{max-width:360px;color:var(--muted)}
+.scope-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.steps{display:grid;gap:14px}
+.step{display:grid;grid-template-columns:90px 1fr;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.step .no{background:var(--navy);color:var(--lime);font-family:var(--head);font-weight:800;font-size:2.4rem;display:grid;place-items:center}
+.step:nth-child(2) .no{background:var(--blue);color:#fff}
+.step:nth-child(3) .no{background:var(--lime);color:var(--navy)}
+.step .c{padding:22px 24px}
+.step small{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--blue)}
+.step h3{font-size:1.3rem;color:var(--navy);margin:4px 0 6px}
+.step p{font-size:.93rem;color:var(--muted)}
+.rules{margin-top:22px;padding:24px 26px;border-left:4px solid var(--lime);background:#fff;border-radius:0 14px 14px 0}
+.rules p{font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.08rem;line-height:1.35}
+.rules p+p{margin-top:8px}
+.addons{margin-top:22px}
+.addons h4{font-family:var(--body);font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:12px}
+.addons div{display:flex;flex-wrap:wrap;gap:8px}
+.addons span{background:var(--white);border:1px dashed var(--blue);color:var(--blue);font-weight:600;font-size:.86rem;padding:7px 14px;border-radius:30px}
+
+.est{background:var(--navy);color:#fff;border-radius:24px;padding:40px;position:relative}
+.est h3{font-size:1.9rem}
+.est .sub{color:#AFC0DA;font-size:.93rem;margin:6px 0 26px}
+.q{margin-bottom:22px}
+.q label.t{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--lime);margin-bottom:10px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{cursor:pointer;padding:9px 15px;border-radius:10px;border:1px solid rgba(255,255,255,.22);font-size:.9rem;font-weight:600;transition:.2s;user-select:none}
+.seg label:hover{border-color:var(--lime)}
+.seg input:checked+label{background:var(--lime);color:var(--navy);border-color:var(--lime)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.est input[type=text],.est input[type=email],.est input[type=tel]{width:100%;padding:14px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;font:inherit}
+.est input::placeholder{color:#8FA2C2}
+.est input:focus{outline:2px solid var(--lime);border-color:transparent}
+.est .btn{width:100%;justify-content:center;margin-top:8px}
+.est .note{font-size:.8rem;color:#8FA2C2;margin-top:12px;text-align:center}
+.bar{height:8px;border-radius:8px;background:rgba(255,255,255,.12);overflow:hidden;margin:4px 0 6px}
+.bar i{display:block;height:100%;width:20%;background:linear-gradient(90deg,var(--lime),#D9EA6A);transition:width .45s}
+.barlbl{display:flex;justify-content:space-between;font-size:.75rem;color:#8FA2C2;margin-bottom:22px}
+
+/* story */
+.story{padding:110px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.year{font-family:var(--head);font-weight:800;font-size:clamp(7rem,15vw,13rem);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--blue);letter-spacing:-.05em}
+.story h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--navy);margin-top:26px}
+.story h2 span{color:var(--blue)}
+.story p{color:var(--muted);margin-top:18px;font-size:1.05rem}
+.twins{display:flex;align-items:center;gap:16px;margin-top:28px;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.twins svg{width:42px;height:42px;color:var(--blue);flex:none}
+.twins b{color:var(--navy);font-family:var(--head);font-size:1.1rem}
+.founders{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.founders .sig{font-family:'Caveat',cursive;font-size:2rem;color:var(--blue);line-height:1}
+.founders small{display:block;color:var(--muted);font-size:.82rem;margin-top:6px}
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.badge{border-radius:16px;padding:22px;background:var(--paper);border:1px solid var(--line)}
+.badge strong{font-family:var(--head);font-size:2.1rem;color:var(--navy);display:block;line-height:1}
+.badge span{font-size:.86rem;color:var(--muted)}
+.badge.l{background:var(--lime)}
+.badge.l span{color:var(--navy)}
+
+/* reviews */
+.reviews{padding:110px 0 100px;overflow:hidden}
+.rv-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.rv-head h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--navy);margin-top:14px}
+.score{display:flex;align-items:center;gap:16px}
+.score b{font-family:var(--head);font-size:3.6rem;color:var(--navy);line-height:1}
+.score .st{color:var(--lime);font-size:1.3rem;letter-spacing:3px;-webkit-text-stroke:.6px var(--navy)}
+.score small{display:block;color:var(--muted);font-size:.86rem}
+.arrows{display:flex;gap:10px}
+.arrows button{width:50px;height:50px;border-radius:50%;border:1.5px solid var(--navy);background:none;cursor:pointer;display:grid;place-items:center;transition:.2s;color:var(--navy)}
+.arrows button:hover{background:var(--navy);color:var(--lime)}
+.arrows svg{width:18px;height:18px}
+.rv-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:none}
+.rv-track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 min(380px,82vw);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:290px;transition:.3s}
+.rv:nth-child(3n+2){background:var(--navy);color:#fff;border-color:var(--navy)}
+.rv:nth-child(3n+2) .who small{color:#AFC0DA}
+.rv:hover{transform:translateY(-6px)}
+.rv .qm{font-family:var(--head);font-size:4rem;line-height:.6;color:var(--lime);height:30px}
+.rv p{font-size:1.06rem;margin:14px 0 24px}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--navy);font-weight:700;display:grid;place-items:center;font-family:var(--head)}
+.who b{display:block;font-size:.98rem}
+.who small{color:var(--muted);font-size:.8rem}
+
+/* commercial */
+.comm{padding:110px 0;background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.comm::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.5px,transparent 1.5px);background-size:22px 22px}
+.comm .wrap{position:relative}
+.comm-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.comm .eyebrow{color:var(--lime)}
+.comm h2{font-size:clamp(2.4rem,4.6vw,3.8rem);margin-top:14px}
+.comm-top p{color:#D9E3F2;font-size:1.06rem}
+.tiles{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;align-items:start}
+.tile{background:#fff;color:var(--ink);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.tile .im{height:230px;overflow:hidden;position:relative}
+.tile:first-child .im{height:300px}
+.tile .im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile:hover .im img{transform:scale(1.06)}
+.tile .im .tag{position:absolute;left:16px;top:16px;background:var(--lime);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:30px}
+.tile .c{padding:24px 24px 28px;flex:1}
+.tile h3{font-size:1.35rem;color:var(--navy);margin-bottom:8px}
+.tile p{font-size:.94rem;color:var(--muted)}
+.tile:nth-child(2){margin-top:60px}
+.tile:nth-child(3){margin-top:120px}
+
+/* final cta */
+.final{padding:110px 0 0}
+.final .box{display:grid;grid-template-columns:1.2fr .8fr;border-radius:28px;overflow:hidden;background:var(--navy);color:#fff}
+.final .l{padding:64px 60px}
+.final h2{font-size:clamp(2.4rem,5vw,4.2rem)}
+.final h2 span{color:var(--lime)}
+.final .l>p{color:#C9D4E6;margin:18px 0 30px;max-width:460px}
+.final .r{background:var(--lime);color:var(--navy);padding:56px 46px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.ci{display:flex;gap:14px;align-items:flex-start}
+.ci svg{width:22px;height:22px;flex:none;margin-top:3px}
+.ci small{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;opacity:.7}
+.ci a,.ci span{font-weight:700;font-size:1.08rem}
+.ci a:hover{text-decoration:underline}
+
+/* footer */
+footer{padding:90px 0 30px;margin-top:100px;background:var(--ink);color:#AFC0DA}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:46px}
+.flogo{background:#fff;display:inline-block;padding:10px 14px;border-radius:12px}
+.flogo img{height:56px}
+footer p{font-size:.92rem;margin-top:18px;max-width:280px}
+footer h4{font-family:var(--body);color:#fff;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:.94rem}
+footer a:hover{color:var(--lime)}
+.map{border-radius:12px;overflow:hidden;height:170px;margin-top:4px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.35)}
+.fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);margin-top:60px;padding-top:26px;font-size:.86rem}
+.fbot a{color:var(--lime)}
+
+/* reveal */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rev.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:1060px){
+  nav{position:fixed;inset:0 0 0 auto;width:min(320px,85vw);background:var(--navy);padding:100px 34px;transform:translateX(100%);visibility:hidden;transition:.35s;z-index:60}
+  nav.open{transform:none;visibility:visible}
+  nav ul{flex-direction:column;gap:22px}
+  nav a{color:#fff;font-size:1.15rem}
+  .menu-btn{display:block;z-index:70;position:relative}
+  .menu-btn.x span{background:#fff}
+  header .btn{display:none}
+  .hero .wrap,.res .wrap,.scope-grid,.story .wrap,.comm-top,.final .box,.carpet .wrap{grid-template-columns:1fr}
+  .hero-visual{height:480px}
+  .res-head{position:static}
+  .res-preview{display:none}
+  .carpet .pic{margin:0 -4.2vw;height:340px}
+  .carpet .txt{padding:60px 0}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tile:nth-child(n){margin-top:0}
+  .tile:first-child{grid-column:1/-1}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .nb{grid-template-columns:1fr;text-align:left}
+  .nb .ph{width:170px;height:170px}
+}
+@media(max-width:640px){
+  .topbar .hide-m{display:none}
+  .logo img{height:46px}
+  .hero{padding:44px 0 70px}
+  .facts{flex-direction:column;gap:16px}
+  .facts div+div{padding-left:0;border-left:0}
+  .hero-visual{height:400px}
+  .hv-main{width:100%;height:320px}
+  .hv-small{height:160px;width:52%}
+  .sticker{right:0;bottom:0;max-width:200px;padding:16px}
+  .idx button{grid-template-columns:42px 1fr auto}
+  .idx .body p,.idx .body ul{padding-left:0}
+  .nb{padding:34px 26px}
+  .est{padding:28px 22px}
+  .row2{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr}
+  .final .l{padding:44px 28px}
+  .final .r{padding:40px 28px}
+  .fgrid{grid-template-columns:1fr}
+  .step{grid-template-columns:64px 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="l">
+      <span class="hide-m">54 Mallard Heath SE, Calgary, Alberta</span>
+      <a href="tel:8255612992">825 561 2992</a>
+      <a href="mailto:Info@greatcleanercalgary.com" class="hide-m">Info@greatcleanercalgary.com</a>
+    </div>
+    <div><span class="stars">★★★★★</span> <b>5.0</b> from 48 verified Google reviews</div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="/" class="logo"><img src="images/great-cleaners-logo.png" alt="Great Cleaners Calgary"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="/" class="on">Home</a></li>
+        <li><a href="https://greatcleanercalgary.com/about/">About Us</a></li>
+        <li><a href="https://greatcleanercalgary.com/residential/">Residential Cleaning</a></li>
+        <li><a href="https://greatcleanercalgary.com/carpet/">Carpet Cleaning</a></li>
+        <li><a href="https://greatcleanercalgary.com/commercial/">Commercial Cleaning</a></li>
+        <li><a href="https://greatcleanercalgary.com/category/blog/">Blog</a></li>
+      </ul>
+    </nav>
+    <a href="#estimate" class="btn btn-lime">Book a Free Estimate</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="rev">
+      <span class="eyebrow">Commercial &amp; residential cleaning in Calgary</span>
+      <h1 style="margin-top:20px">Premium home cleaning in Calgary, <span class="hl">tailored</span> to your priorities.</h1>
+      <p class="lead">Time-based pricing, flexible scope, and a satisfaction walk-through before we leave.</p>
+      <div class="ctas">
+        <a href="#estimate" class="btn btn-lime">Book a Free Estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:8255612992" class="btn btn-line">Call 825 561 2992</a>
+      </div>
+      <div class="facts">
+        <div><strong>$79–$85/hr</strong><span>2-cleaner team</span></div>
+        <div><strong>5.0 ★</strong><span>48 verified Google reviews</span></div>
+        <div><strong>#2</strong><span>Best Calgary, Feb 2026</span></div>
+      </div>
+    </div>
+    <div class="hero-visual rev">
+      <div class="hero-dots"></div>
+      <div class="hv-main"><img src="images/cleaner-team.jpg" alt="Great Cleaners Calgary cleaner scrubbing tile"></div>
+      <div class="hv-small"><img src="images/regular-cleaning.jpg" alt="Clean, bright Calgary home"></div>
+      <div class="sticker">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></div>
+        <strong>Satisfaction walk-through</strong>
+        <small>We walk through with you before we leave.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-wrap"><div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span>Don't Clean. Live. <i>✦</i> Clean Space. Clear Mind. <i>✦</i> Don't Clean. Live. <i>✦</i> Clean Space. Clear Mind. <i>✦</i></span>
+    <span>Don't Clean. Live. <i>✦</i> Clean Space. Clear Mind. <i>✦</i> Don't Clean. Live. <i>✦</i> Clean Space. Clear Mind. <i>✦</i></span>
+  </div>
+</div></div>
+
+<!-- RESIDENTIAL -->
+<section class="res" id="residential">
+  <div class="wrap">
+    <div class="res-head rev">
+      <span class="eyebrow">Residential cleaning</span>
+      <h2>Pick the clean your home needs.</h2>
+      <p>Consistent upkeep, deep resets and detailed move-out cleans, all tailored to your priorities.</p>
+      <div class="res-preview" id="resPrev">
+        <img src="images/regular-cleaning.jpg" alt="Regular cleaning" class="show">
+        <img src="images/deep-cleaning.jpg" alt="Deep cleaning">
+        <img src="images/move-in-out.jpg" alt="Move-in / move-out cleaning">
+        <img src="images/seasonal-reset.jpg" alt="Seasonal spring reset">
+        <img src="images/seniors-cleaning.jpg" alt="Seniors cleaning">
+        <img src="images/post-construction.jpg" alt="Post-construction cleaning">
+      </div>
+    </div>
+    <ul class="idx rev" id="idx">
+      <li class="open">
+        <button><span class="n">01</span><h3>Regular Cleaning <span class="tag">Most popular</span></h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>Consistent upkeep, tailored to your priorities.</p><ul><li>Weekly</li><li>Bi-weekly</li><li>Monthly</li></ul></div></div>
+      </li>
+      <li>
+        <button><span class="n">02</span><h3>Deep Cleaning</h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>A thorough clean that reaches every corner, inside appliances, grout and beyond.</p><ul><li>Inside appliances</li><li>Grout</li></ul></div></div>
+      </li>
+      <li>
+        <button><span class="n">03</span><h3>Move-In / Move-Out</h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>A detailed clean for vacant properties, before moving in or after moving out. For tenants and landlords.</p><ul><li>Baseboards</li><li>Inside cabinets</li><li>Appliances</li></ul></div></div>
+      </li>
+      <li>
+        <button><span class="n">04</span><h3>Seasonal / Spring Reset</h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>Refresh your home with the change of season.</p><ul><li>Windows</li><li>Vents</li><li>Baseboards</li></ul></div></div>
+      </li>
+      <li>
+        <button><span class="n">05</span><h3>Seniors Cleaning</h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>Trusted, respectful cleaning for older adults.</p><ul><li>Consistency</li><li>Communication</li></ul></div></div>
+      </li>
+      <li>
+        <button><span class="n">06</span><h3>Post-Construction</h3><span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="body"><div><p>Clean-up after a renovation or build, estimated on time based on scope and condition.</p><ul><li>Post-renovation</li><li>Time-based estimate</li></ul></div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CARPET -->
+<section class="carpet" id="carpet">
+  <div class="wrap">
+    <div class="pic"><img src="images/carpet-cleaning.jpg" alt="Carpet cleaning in Calgary"></div>
+    <div class="txt rev">
+      <span class="eyebrow">Carpet cleaning</span>
+      <h2>Multi-step professional process.</h2>
+      <div class="price"><small>From</small><b>$45</b><small>/ room</small></div>
+      <ol class="process">
+        <li>Vacuum</li>
+        <li>Pre-spray</li>
+        <li>Scrubber</li>
+        <li>Hot-water extraction</li>
+      </ol>
+      <a href="https://greatcleanercalgary.com/carpet/" class="btn btn-line">Carpet Cleaning <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWBORN -->
+<section class="newborn">
+  <div class="wrap">
+    <div class="nb rev">
+      <div class="ph"><img src="images/newborn-reset.jpg" alt="Baby in a freshly cleaned home"></div>
+      <div>
+        <span class="flag">Featured program</span>
+        <h2>Newborn Home Reset</h2>
+        <p>A pre-baby clean and organization using baby-safe products.</p>
+      </div>
+      <a href="#estimate" class="btn btn-lime">Book a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCOPE + ESTIMATE -->
+<section class="scope" id="estimate">
+  <div class="wrap">
+    <div class="scope-top rev">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2>You control the scope. We deliver on it.</h2>
+      </div>
+      <p>Choose which areas to focus on. More tasks = more time. More time = more results.</p>
+    </div>
+    <div class="scope-grid">
+      <div class="rev">
+        <div class="steps">
+          <div class="step"><div class="no">1</div><div class="c"><small>You start</small><h3>Tell us what you need.</h3><p>Quick online questions, or an in-home inspection when needed.</p></div></div>
+          <div class="step"><div class="no">2</div><div class="c"><small>We estimate</small><h3>We estimate time based on scope + condition.</h3><p>Your estimate is a range, not a fixed price.</p></div></div>
+          <div class="step"><div class="no">3</div><div class="c"><small>We deliver</small><h3>We clean + walk through before we leave.</h3><p>A satisfaction walk-through before the crew goes.</p></div></div>
+        </div>
+        <div class="rules">
+          <p>No surprises. We confirm time before adding anything.</p>
+        </div>
+        <div class="addons">
+          <h4>Popular add-ons</h4>
+          <div><span>Inside Oven</span><span>Inside Fridge</span><span>Laundry &amp; Fold</span><span>Bed Making</span><span>Wall Cleaning</span><span>Light Organization</span><span>Priority Clean</span><span>Blinds</span></div>
+        </div>
+      </div>
+
+      <form class="est rev" action="mailto:Info@greatcleanercalgary.com" method="post" enctype="text/plain" id="estForm">
+        <h3>Get your free estimate</h3>
+        <p class="sub">Answer a few quick questions. The final quote may vary.</p>
+
+        <div class="q"><label class="t">Service type</label>
+          <div class="seg">
+            <input type="radio" name="service" id="s1" value="Standard" checked><label for="s1">Standard</label>
+            <input type="radio" name="service" id="s2" value="Deep"><label for="s2">Deep</label>
+            <input type="radio" name="service" id="s3" value="Move Out"><label for="s3">Move Out</label>
+            <input type="radio" name="service" id="s4" value="Post Construction"><label for="s4">Post Construction</label>
+          </div>
+        </div>
+        <div class="q"><label class="t">Bedrooms</label>
+          <div class="seg">
+            <input type="radio" name="bedrooms" id="b0" value="Studio" checked><label for="b0">Studio</label>
+            <input type="radio" name="bedrooms" id="b1" value="1"><label for="b1">1</label>
+            <input type="radio" name="bedrooms" id="b2" value="2"><label for="b2">2</label>
+            <input type="radio" name="bedrooms" id="b3" value="3"><label for="b3">3</label>
+            <input type="radio" name="bedrooms" id="b4" value="4+"><label for="b4">4+</label>
+          </div>
+        </div>
+        <div class="q"><label class="t">Condition</label>
+          <div class="seg">
+            <input type="radio" name="condition" id="c1" value="Light" checked><label for="c1">Light</label>
+            <input type="radio" name="condition" id="c2" value="Average"><label for="c2">Average</label>
+            <input type="radio" name="condition" id="c3" value="Dirty"><label for="c3">Dirty</label>
+            <input type="radio" name="condition" id="c4" value="Very Dirty"><label for="c4">Very Dirty</label>
+          </div>
+        </div>
+        <div class="q"><label class="t">Extras</label>
+          <div class="seg">
+            <input type="checkbox" name="extras" id="e1" value="Fridge"><label for="e1">Fridge</label>
+            <input type="checkbox" name="extras" id="e2" value="Oven"><label for="e2">Oven</label>
+            <input type="checkbox" name="extras" id="e3" value="Laundry"><label for="e3">Laundry</label>
+            <input type="checkbox" name="extras" id="e4" value="Windows"><label for="e4">Windows</label>
+            <input type="checkbox" name="extras" id="e5" value="Walls"><label for="e5">Walls</label>
+          </div>
+        </div>
+        <div class="bar"><i id="barFill"></i></div>
+        <div class="barlbl"><span>Less time</span><span>More tasks = more time</span></div>
+
+        <div class="row2 q">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="tel" name="phone" placeholder="Phone number" required>
+        </div>
+        <div class="q"><input type="email" name="email" placeholder="Email address" required></div>
+        <button class="btn btn-lime" type="submit">Book a Free Estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="note">$79–$85/hr with a 2-cleaner team. Estimated in CAD.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="about">
+  <div class="wrap">
+    <div class="rev">
+      <div class="year">2019</div>
+      <h2>Born from a moving truck. <span>Built on trust.</span></h2>
+      <p>We started in 2019 with Great Movers Calgary. Our clients kept asking us for cleaning help, so Great Cleaners Calgary was created.</p>
+      <div class="twins">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 7h13v9H1zM14 10h4l3 3v3h-7z"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        <div><b>Two twin companies, one shared reputation.</b></div>
+      </div>
+    </div>
+    <div class="rev">
+      <p style="margin-top:0">Our founders lead operations directly.</p>
+      <div class="founders">
+        <div><div class="sig">José Chacón Triana</div><small>Founder</small></div>
+        <div><div class="sig">Sofía Moreno Ruiz</div><small>Founder</small></div>
+      </div>
+      <div class="badges">
+        <div class="badge l"><strong>5.0 ★</strong><span>48 verified Google reviews</span></div>
+        <div class="badge"><strong>#2</strong><span>Best Calgary, The Best Calgary, Feb 2026</span></div>
+        <div class="badge"><strong>2019</strong><span>Established</span></div>
+        <div class="badge"><strong>$79–$85</strong><span>Per hour, 2-cleaner team</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="rv-head rev">
+      <div>
+        <span class="eyebrow">Google reviews</span>
+        <h2>What Calgary says.</h2>
+      </div>
+      <div class="score">
+        <b>5.0</b>
+        <div><div class="st">★★★★★</div><small>48 verified reviews</small></div>
+      </div>
+      <div class="arrows">
+        <button id="rvPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button id="rvNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="rv-track" id="rvTrack">
+      <div class="rv"><div><div class="qm">“</div><p>Great Cleaners Calgary are by far the best home cleaners I've ever used.</p></div><div class="who"><div class="av">LB</div><div><b>Lindsey Baker</b><small>Google ★★★★★</small></div></div></div>
+      <div class="rv"><div><div class="qm">“</div><p>For the past two years, I have relied on the services of Great Cleaners for home, carpet, and office cleaning.</p></div><div class="who"><div class="av">C</div><div><b>Carpa</b><small>Google ★★★★★</small></div></div></div>
+      <div class="rv"><div><div class="qm">“</div><p>Llevo más de dos años usando Great Cleaners y no podría estar más contento.</p></div><div class="who"><div class="av">KA</div><div><b>Karen Alvarenga</b><small>Google ★★★★★</small></div></div></div>
+      <div class="rv"><div><div class="qm">“</div><p>They were prompt, professional, and paid attention to every detail.</p></div><div class="who"><div class="av">JT</div><div><b>John Thomas</b><small>Google ★★★★★</small></div></div></div>
+      <div class="rv"><div><div class="qm">“</div><p>Great Cleaners has provided exceptional service since 2022 for cleaning my pet-friendly home.</p></div><div class="who"><div class="av">FR</div><div><b>Fabio Rodriguez Corredor</b><small>Google ★★★★★</small></div></div></div>
+      <div class="rv"><div><div class="qm">“</div><p>Great Cleaners are totally reliable, punctual, with excellent customer service and relations, cost effective.</p></div><div class="who"><div class="av">FH</div><div><b>Faizal Hamza</b><small>Google ★★★★★</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIAL -->
+<section class="comm" id="commercial">
+  <div class="wrap">
+    <div class="comm-top rev">
+      <div>
+        <span class="eyebrow">Commercial cleaning</span>
+        <h2>We also clean businesses.</h2>
+      </div>
+      <p>Offices, restaurants, retail stores and any commercial space in Calgary. The same detail-oriented approach we bring to homes.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile rev">
+        <div class="im"><img src="images/office-cleaning.jpg" alt="Office cleaning Calgary"><span class="tag">Most popular</span></div>
+        <div class="c"><h3>Offices &amp; Corporate</h3><p>Regular or one-time commercial cleaning around your schedule. Early mornings, evenings or weekends.</p></div>
+      </div>
+      <div class="tile rev">
+        <div class="im"><img src="images/restaurant-cleaning.jpg" alt="Restaurant cleaning Calgary"></div>
+        <div class="c"><h3>Restaurants &amp; Food Service</h3><p>Health-standard kitchen deep cleans, dining area maintenance and all food service environments, around your business hours.</p></div>
+      </div>
+      <div class="tile rev">
+        <div class="im"><img src="images/gym-retail-cleaning.jpg" alt="Gym and retail cleaning Calgary"></div>
+        <div class="c"><h3>Retail, Gyms &amp; More</h3><p>Consistent professional cleaning for any commercial environment: retail, medical, gyms, salons.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="box rev">
+      <div class="l">
+        <h2>Clean Space. <span>Clear Mind.</span></h2>
+        <p>Serving Calgary and surrounding areas. Tell us what you need and we'll estimate the time.</p>
+        <a href="#estimate" class="btn btn-lime">Book a Free Estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="r">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Call</small><a href="tel:8255612992">825 561 2992</a></div></div>
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><div><small>Email</small><a href="mailto:Info@greatcleanercalgary.com">Info@greatcleanercalgary.com</a></div></div>
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><small>Visit</small><span>54 Mallard Heath SE, Calgary, Alberta</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="/" class="flogo"><img src="images/great-cleaners-logo.png" alt="Great Cleaners Calgary"></a>
+        <p>We solve your needs in commercial &amp; residential cleaning service in Calgary!</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://greatcleanercalgary.com/residential/">Residential Cleaning</a></li>
+          <li><a href="https://greatcleanercalgary.com/carpet/">Carpet Cleaning</a></li>
+          <li><a href="https://greatcleanercalgary.com/commercial/">Commercial Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="https://greatcleanercalgary.com/about/">About Us</a></li>
+          <li><a href="https://greatcleanercalgary.com/category/blog/">Blog</a></li>
+          <li><a href="#estimate">Book a Free Estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <div class="map"><iframe loading="lazy" title="Great Cleaner Calgary location" src="https://maps.google.com/maps?q=54%20Mallard%20Heath%20SE%2C%20Calgary%2C%20Alberta&z=13&output=embed"></iframe></div>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>Copyright © 2026 Great Cleaner Calgary</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// mobile menu
+const nav=document.getElementById('nav'),mb=document.getElementById('menuBtn');
+mb.onclick=()=>{nav.classList.toggle('open');mb.classList.toggle('x')};
+nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');mb.classList.remove('x')});
+
+// residential accordion + preview
+const items=[...document.querySelectorAll('#idx>li')],prev=[...document.querySelectorAll('#resPrev img')];
+items.forEach((li,i)=>{
+  li.querySelector('button').onclick=()=>{
+    const was=li.classList.contains('open');
+    items.forEach(x=>x.classList.remove('open'));
+    if(!was)li.classList.add('open');
+    prev.forEach((p,j)=>p.classList.toggle('show',j===i));
+  };
+  li.addEventListener('mouseenter',()=>prev.forEach((p,j)=>p.classList.toggle('show',j===i)));
+});
+
+// estimate meter (visual only: more tasks = more time)
+const form=document.getElementById('estForm'),fill=document.getElementById('barFill');
+function meter(){
+  const s={'Standard':1,'Deep':2,'Move Out':2.5,'Post Construction':3}[form.service.value];
+  const b={'Studio':0,'1':1,'2':2,'3':3,'4+':4}[form.bedrooms.value];
+  const c={'Light':0,'Average':1,'Dirty':2,'Very Dirty':3}[form.condition.value];
+  const e=form.querySelectorAll('input[name=extras]:checked').length;
+  fill.style.width=Math.min(100,12+s*10+b*7+c*7+e*4)+'%';
+}
+form.addEventListener('change',meter);meter();
+
+// reviews arrows
+const tr=document.getElementById('rvTrack');
+document.getElementById('rvNext').onclick=()=>tr.scrollBy({left:400,behavior:'smooth'});
+document.getElementById('rvPrev').onclick=()=>tr.scrollBy({left:-400,behavior:'smooth'});
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
